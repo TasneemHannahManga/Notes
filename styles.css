@@ -1,0 +1,169 @@
+body {
+    background-image: url(images/warp.png);
+}
+
+.title {
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    cursor: default;
+    user-select: none;
+}
+
+.new-note {
+    outline-style: dashed;
+    outline-color: aliceblue;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 248, 255, 0.247);
+    align-items: center;
+    user-select: none;
+    order: 1;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    resize: none;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.content:focus {
+    outline: none;
+}
+
+.note {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    color: grey;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    order: 1;
+    cursor: default;
+    user-select: none;
+}
+
+.clicked {
+    background-color: rgba(190, 190, 190, 0.53);
+}
+
+@media  (min-width: 991px) {
+
+    .note-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 50px;
+    }
+
+    .note {
+        width: 350px;
+        height: 175px;
+    }
+
+    .content {
+        height: 150px;
+        width: 300px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    span {
+        margin-top: 15px;
+        height: 20px;
+        width: 20px;
+        margin-left: 15px;
+    }
+
+    .new-note {
+        width: 150px;
+        height: 75px;
+        margin: 20px 40px;
+    }
+}
+
+@media  (min-width: 425px) and (max-width: 991px) {
+
+    .note-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .note {
+        width: 350px;
+        height: 175px;
+        margin: 20px;
+    }
+
+    .content {
+        height: 150px;
+        width: 300px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    span {
+        margin-top: 15px;
+        height: 20px;
+        width: 20px;
+        margin-left: 15px;
+    }
+
+    .new-note {
+        width: 150px;
+        height: 75px;
+        margin: 20px 40px;
+    }
+}
+
+@media (max-width:425px) {
+
+    .note-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .note {
+        width: 200px;
+        height: 120px;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+    .new-note {
+        width: 100px;
+        height: 50px;
+        margin: 30px;
+    }
+
+    .content {
+        height: 150px;
+        width: 300px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    span {
+        margin-top: 15px;
+        height: 20px;
+        width: 20px;
+        margin-left: 15px;
+    }
+}
